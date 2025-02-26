@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -9,29 +10,37 @@ export default function Contact() {
   const [statusMessage, setStatusMessage] = useState("");
 
   // 🔹 Atualiza os valores do formulário
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // 🔹 Função de envio do formulário (simulação)
+  // 🔹 Envio via EmailJS
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatusMessage("");
 
-    // Simulando um tempo de resposta (API ou EmailJS pode ser usado aqui)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setStatusMessage(t("contact.successMessage"));
-      setForm({ name: "", email: "", message: "" });
-    }, 2000);
+    emailjs
+      .send(
+        "service_14enp9o", // 🔹 Substitua pelo Service ID do EmailJS
+        "template_ehyvy4m", // 🔹 Substitua pelo Template ID
+        form,
+        "RbKJPbvNog1z-isJK" // 🔹 Substitua pela Public Key
+      )
+      .then(() => {
+        setStatusMessage(t("contact.successMessage"));
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch(() => {
+        setStatusMessage(t("contact.errorMessage"));
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
     <section className="flex flex-col items-center justify-center min-h-screen px-6 pt-24">
-      {/* 🔹 Título */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,7 +50,6 @@ export default function Contact() {
         {t("contact.title")}
       </motion.h1>
 
-      {/* 🔹 Descrição */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -51,7 +59,6 @@ export default function Contact() {
         {t("contact.description")}
       </motion.p>
 
-      {/* 🔹 Formulário de Contato */}
       <motion.form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 20 }}
@@ -60,9 +67,7 @@ export default function Contact() {
         className="w-full max-w-lg bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
       >
         <div className="mb-4">
-          <label className="block text-gray-700 dark:text-gray-300">
-            {t("contact.name")}
-          </label>
+          <label className="block text-gray-700 dark:text-gray-300">{t("contact.name")}</label>
           <input
             type="text"
             name="name"
@@ -74,9 +79,7 @@ export default function Contact() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 dark:text-gray-300">
-            {t("contact.email")}
-          </label>
+          <label className="block text-gray-700 dark:text-gray-300">{t("contact.email")}</label>
           <input
             type="email"
             name="email"
@@ -88,9 +91,7 @@ export default function Contact() {
         </div>
 
         <div className="mb-4">
-          <label className="block text-gray-700 dark:text-gray-300">
-            {t("contact.message")}
-          </label>
+          <label className="block text-gray-700 dark:text-gray-300">{t("contact.message")}</label>
           <textarea
             name="message"
             value={form.message}
@@ -102,9 +103,7 @@ export default function Contact() {
         </div>
 
         {/* 🔹 Status de Envio */}
-        {statusMessage && (
-          <p className="text-green-500 text-center">{statusMessage}</p>
-        )}
+        {statusMessage && <p className="text-green-500 text-center">{statusMessage}</p>}
 
         {/* 🔹 Botão de Envio */}
         <button

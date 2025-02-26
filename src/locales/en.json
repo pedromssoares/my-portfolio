@@ -66,6 +66,16 @@
     "email": "Your Email",
     "message": "Your Message",
     "sendMessage": "Send Message",
+    "errorMessage": "Oops! Something went wrong. Please try again later.",
     "successMessage": "Message sent successfully! I'll get back to you soon."
+  },
+  "projects": {
+    "title": "My Projects",
+    "filters": {
+      "all": "All",
+      "frontend": "Frontend",
+      "fullstack": "Fullstack",
+      "cms": "CMS"
+    }
   }
 }

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { FaReact, FaAngular, FaJs, FaNodeJs, FaCloud } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiAdobe, SiContentstack, SiTerraform } from "react-icons/si";
-import { TbApi } from "react-icons/tb";
 
 export default function About() {
   const { t } = useTranslation();
