@@ -7,9 +7,9 @@
   ],
   "cta": "Veja meus projetos →",
   "myPortfolio": "Meu Portfolio",
-  "about": "Sobre",
-  "projects": "Projetos",
-  "contact": "Contato",
+  "aboutMenu": "Sobre",
+  "projectsMenu": "Projetos",
+  "contactMenu": "Contato",
   "footer": "Pedro Soares. Todos os direitos reservados.",
   "about": {
     "title": "Quem sou eu?",
@@ -58,5 +58,14 @@
         "technologies": "Java, Spring Boot, MySQL, AWS, Python (básico), SQL."
       }
     ]
+  },
+  "contact": {
+    "title": "Vamos Conversar!",
+    "description": "Se você tem um projeto, uma oportunidade ou apenas quer dizer oi, fique à vontade para me enviar uma mensagem!",
+    "name": "Seu Nome",
+    "email": "Seu Email",
+    "message": "Sua Mensagem",
+    "sendMessage": "Enviar Mensagem",
+    "successMessage": "Mensagem enviada com sucesso! Logo entrarei em contato."
   }
 }
