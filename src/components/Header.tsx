@@ -1,13 +1,14 @@
-import { Moon, Sun } from "lucide-react";
-import useTheme from "@/hooks/useTheme";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react"; // Ícones para menu hambúrguer
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Estado do menu hambúrguer
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,105 +18,126 @@ export default function Header() {
     return () => clearTimeout(timer);
   }, []);
 
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
-
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === "en" ? "pt" : "en");
   };
 
   return (
-    <header className="w-full bg-primary text-white dark:bg-darkPrimary dark:text-darkText py-4 px-6 shadow-md">
-      <div className="mx-auto flex justify-between items-center">
-        {/* 🔹 Logo Animado */}
-        <Link href="/">
-          <motion.div className="text-3xl md:text-4xl font-extrabold tracking-wide flex items-center">
-            <AnimatePresence mode="wait">
-              {!isCollapsed ? (
+    <header className="p-4 flex justify-between items-center bg-primary text-white shadow-md w-full fixed top-0 left-0 z-50">
+      {/* 🔹 Logo Responsivo */}
+      <Link href="/" className="flex items-center">
+        <motion.div className="text-xl md:text-3xl font-extrabold tracking-wide flex items-center">
+          <AnimatePresence mode="wait">
+            {!isCollapsed ? (
+              <motion.span
+                key="fullName"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.5 }}
+                className="whitespace-nowrap"
+              >
+                <span className="text-secondary">Pedro</span>
+                <span className="text-accent">Soares</span>
+              </motion.span>
+            ) : (
+              <motion.span
+                key="initials"
+                className="flex space-x-2"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.5 }}
+              >
                 <motion.span
-                  key="fullName"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
+                  className="text-secondary"
+                  initial={{ x: 0 }}
+                  animate={{ x: 6 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <span className="text-secondary">Pedro</span>
-                  <span className="text-accent">Soares</span>
+                  P
                 </motion.span>
-              ) : (
                 <motion.span
-                  key="initials"
-                  className="flex space-x-1" // 🔹 Adicionamos espaçamento fixo entre "P" e "S"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 20 }}
+                  className="text-accent"
+                  initial={{ x: 0 }}
+                  animate={{ x: -6 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <motion.span
-                    className="text-secondary"
-                    initial={{ x: 0 }}
-                    animate={{ x: 6 }} // 🔹 Ajustamos a distância final para não sobrepor
-                    transition={{ duration: 0.5 }}
-                  >
-                    P
-                  </motion.span>
-                  <motion.span
-                    className="text-accent"
-                    initial={{ x: 0 }}
-                    animate={{ x: -1 }} // 🔹 Ajustamos a distância final para não sobrepor
-                    transition={{ duration: 0.5 }}
-                  >
-                    S
-                  </motion.span>
+                  S
                 </motion.span>
-              )}
-            </AnimatePresence>
-          </motion.div>
-        </Link>
-        <nav className="flex items-center gap-6">
-          <ul className="flex gap-6">
-            <li>
-              <a
-                href="#about"
-                className="hover:text-accent dark:hover:text-darkAccent transition"
-              >
-                {t("about")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                className="hover:text-accent dark:hover:text-darkAccent transition"
-              >
-                {t("projects")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:text-accent dark:hover:text-darkAccent transition"
-              >
-                {t("contact")}
-              </a>
-            </li>
-          </ul>
-          {/* Dark Mode Toggle Button */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-lg bg-primary dark:bg-darkPrimary hover:bg-opacity-80 transition-all"
-          >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
+              </motion.span>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </Link>
 
-          {/*Language Toggle Button*/}
-          <button
-            onClick={toggleLanguage}
-            className="bg-white text-primary px-4 py-2 rounded"
-          >
-            {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
-          </button>
-        </nav>
+      {/* 🔹 Navegação para Desktop */}
+      <nav className="hidden md:flex space-x-6 ml-auto pr-4">
+        <Link href="#about" className="hover:text-gray-300 transition">
+          {t("about")}
+        </Link>
+        <Link href="#projects" className="hover:text-gray-300 transition">
+          {t("projects")}
+        </Link>
+        <Link href="#contact" className="hover:text-gray-300 transition">
+          {t("contact")}
+        </Link>
+      </nav>
+
+      {/* 🔹 Menu Hambúrguer (Mobile) */}
+      <div className="md:hidden flex items-center">
+        {/* 🔹 Botão de idioma no Mobile */}
+        <button
+          onClick={toggleLanguage}
+          className="bg-white text-primary px-2 py-2 rounded-md hover:bg-gray-200 transition mr-4"
+        >
+          {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
+        </button>
+
+        <button onClick={() => setMenuOpen(!menuOpen)} className="p-2">
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* 🔹 Menu Mobile Dropdown */}
+      {menuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="absolute top-16 left-0 w-full bg-primary text-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden"
+        >
+          <Link
+            href="#about"
+            className="hover:text-gray-300 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t("about")}
+          </Link>
+          <Link
+            href="#projects"
+            className="hover:text-gray-300 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t("projects")}
+          </Link>
+          <Link
+            href="#contact"
+            className="hover:text-gray-300 transition"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t("contact")}
+          </Link>
+        </motion.div>
+      )}
+
+      {/* 🔹 Botão Responsivo de Troca de Idioma */}
+      <button
+        onClick={toggleLanguage}
+        className="hidden md:block bg-white text-primary px-4 py-2 rounded-md hover:bg-gray-200 transition text-sm md:text-base"
+      >
+        {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
+      </button>
     </header>
   );
 }

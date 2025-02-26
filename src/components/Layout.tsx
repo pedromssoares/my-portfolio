@@ -8,14 +8,19 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative z-10 flex flex-col min-h-screen bg-background text-text dark:bg-darkBackground dark:text-darkText transition-colors duration-300">
-      {/* 🔹 Background Animado fica FORA do `main` para cobrir tudo */}
+    <div className="relative z-10 flex flex-col h-screen bg-background text-text dark:bg-darkBackground dark:text-darkText transition-colors duration-300">
+      {/* 🔹 Header Fixo no Topo */}
+      <Header />
+
+      {/* 🔹 Background Animado */}
       <ParticlesBackground />
 
-      <Header />
-      <main className="flex flex-col items-center justify-center min-h-[70vh] container mx-auto px-4 py-8">
+      {/* 🔹 Conteúdo que se ajusta automaticamente */}
+      <main className="flex-grow flex flex-col items-center justify-center">
         {children}
       </main>
+
+      {/* 🔹 Footer Fixo no Final */}
       <Footer />
     </div>
   );
