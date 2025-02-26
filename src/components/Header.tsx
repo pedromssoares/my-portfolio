@@ -2,29 +2,37 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import { Menu, X } from "lucide-react"; // Ícones para menu hambúrguer
+import { Menu, X, Moon, Sun } from "lucide-react"; // Ícones para o Dark Mode e Menu
+import useTheme from "@/hooks/useTheme";
 
 export default function Header() {
+  const { theme, toggleTheme } = useTheme();
   const { i18n } = useTranslation();
   const { t } = useTranslation();
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Estado do menu hambúrguer
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false); // Para evitar erros na renderização SSR
 
   useEffect(() => {
+    setMounted(true);
     const timer = setTimeout(() => {
-      setIsCollapsed(true); // 🔹 Após 2 segundos, reduz para "PS"
+      setIsCollapsed(true);
     }, 2000);
-
     return () => clearTimeout(timer);
   }, []);
+
+  const handleThemeToggle = () => {
+    if (!mounted) return;
+    toggleTheme();
+  };
 
   const toggleLanguage = () => {
     i18n.changeLanguage(i18n.language === "en" ? "pt" : "en");
   };
 
   return (
-    <header className="p-4 flex justify-between items-center bg-primary text-white shadow-md w-full fixed top-0 left-0 z-50">
-      {/* 🔹 Logo Responsivo */}
+    <header className="p-4 flex items-center justify-between bg-primary text-white shadow-md w-full fixed top-0 left-0 z-50">
+      {/* 🔹 Logo à Esquerda */}
       <Link href="/" className="flex items-center">
         <motion.div className="text-xl md:text-3xl font-extrabold tracking-wide flex items-center">
           <AnimatePresence mode="wait">
@@ -71,29 +79,58 @@ export default function Header() {
         </motion.div>
       </Link>
 
-      {/* 🔹 Navegação para Desktop */}
-      <nav className="hidden md:flex space-x-6 ml-auto pr-4">
+      {/* 🔹 Menu Desktop e Botões - Alinhados à Direita */}
+      <div className="hidden md:flex items-center space-x-6 ml-auto">
         <Link href="/about" className="hover:text-gray-300 transition">
-          {t("about")}
+          {t("aboutMenu")}
         </Link>
-        <Link href="#projects" className="hover:text-gray-300 transition">
-          {t("projects")}
+        <Link href="/projects" className="hover:text-gray-300 transition">
+          {t("projectsMenu")}
         </Link>
-        <Link href="#contact" className="hover:text-gray-300 transition">
-          {t("contact")}
+        <Link href="/contact" className="hover:text-gray-300 transition">
+          {t("contactMenu")}
         </Link>
-      </nav>
 
-      {/* 🔹 Menu Hambúrguer (Mobile) */}
-      <div className="md:hidden flex items-center">
-        {/* 🔹 Botão de idioma no Mobile */}
+        {/* 🔹 Botão de Troca de Idioma */}
         <button
           onClick={toggleLanguage}
-          className="bg-white text-primary px-2 py-2 rounded-md hover:bg-gray-200 transition mr-4"
+          className="p-2 bg-white text-primary rounded-full hover:bg-gray-200 transition"
         >
           {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
         </button>
 
+        {/* 🔹 Botão de Dark Mode */}
+        {mounted && (
+          <button
+            onClick={handleThemeToggle}
+            className="p-2 bg-white text-primary rounded-full hover:bg-gray-200 transition"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+        )}
+      </div>
+
+      {/* 🔹 Menu Mobile (Hambúrguer) - Alinhado à Direita */}
+      <div className="md:hidden flex items-center space-x-4">
+        {/* 🔹 Botão de Troca de Idioma no Mobile */}
+        <button
+          onClick={toggleLanguage}
+          className="p-2 bg-white text-primary rounded-full hover:bg-gray-200 transition"
+        >
+          {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
+        </button>
+
+        {/* 🔹 Botão de Dark Mode no Mobile */}
+        {mounted && (
+          <button
+            onClick={handleThemeToggle}
+            className="p-2 bg-white text-primary rounded-full hover:bg-gray-200 transition"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+        )}
+
+        {/* 🔹 Botão de Abrir/Fechar Menu Mobile */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="p-2">
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -112,32 +149,24 @@ export default function Header() {
             className="hover:text-gray-300 transition"
             onClick={() => setMenuOpen(false)}
           >
-            {t("about")}
+            {t("aboutMenu")}
           </Link>
           <Link
-            href="#projects"
+            href="/projects"
             className="hover:text-gray-300 transition"
             onClick={() => setMenuOpen(false)}
           >
-            {t("projects")}
+            {t("projectsMenu")}
           </Link>
           <Link
-            href="#contact"
+            href="/contact"
             className="hover:text-gray-300 transition"
             onClick={() => setMenuOpen(false)}
           >
-            {t("contact")}
+            {t("contactMenu")}
           </Link>
         </motion.div>
       )}
-
-      {/* 🔹 Botão Responsivo de Troca de Idioma */}
-      <button
-        onClick={toggleLanguage}
-        className="hidden md:block bg-white text-primary px-4 py-2 rounded-md hover:bg-gray-200 transition text-sm md:text-base"
-      >
-        {i18n.language === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
-      </button>
     </header>
   );
 }

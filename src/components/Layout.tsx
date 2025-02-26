@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative z-10 flex flex-col h-screen bg-background text-text dark:bg-darkBackground dark:text-darkText transition-colors duration-300">
+    <div className="relative z-10 flex flex-col bg-background text-text dark:bg-darkBackground dark:text-darkText transition-colors duration-300">
       {/* 🔹 Header Fixo no Topo */}
       <Header />
 

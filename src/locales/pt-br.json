@@ -1,14 +1,62 @@
 {
   "greeting": "Olá, eu sou Pedro 👋",
-  "developer": ["Desenvolvedor Frontend 🚀", "Especialista em CMS Headless", "Experiente com Angular e React"],
+  "developer": [
+    "Desenvolvedor Frontend 🚀",
+    "Especialista em CMS Headless",
+    "Experiente com Angular e React"
+  ],
   "cta": "Veja meus projetos →",
   "myPortfolio": "Meu Portfolio",
   "about": "Sobre",
   "projects": "Projetos",
   "contact": "Contato",
   "footer": "Pedro Soares. Todos os direitos reservados.",
-  "aboutMe": {
+  "about": {
     "title": "Quem sou eu?",
-    "description": "Sou Pedro, um desenvolvedor Frontend apaixonado, especializado em Next.js, React e soluções de CMS Headless. Adoro criar aplicações web de alto desempenho e experiências de usuário incríveis."
+    "description": "Sou um Desenvolvedor de Software orientado a resultados e Especialista em CMS Headless, com mais de seis anos de experiência em desenvolvimento frontend, arquitetura de CMS e computação em nuvem. Reconhecido como SME (Especialista) em CMS Headless, possuo profundo conhecimento em Contentstack e Adobe Experience Manager (AEM), liderando projetos focados em arquitetura composável, implantações multi-site, integrações de API e otimização de performance. Apaixonado por construir aplicações web escaláveis e de alto desempenho, gosto de liderar iniciativas técnicas que impulsionam o crescimento dos negócios. Atualmente, estou buscando oportunidades internacionais para aplicar minhas habilidades em um ambiente global, colaborando com equipes inovadoras na criação de experiências digitais de ponta.",
+
+    "experience": [
+      {
+        "role": "Especialista em CMS & Desenvolvedor Frontend Sênior",
+        "company": "NTT DATA",
+        "date": "09/2023 - Presente",
+        "location": "São Paulo, BR - Remoto",
+        "tasks": [
+          "Atuei como SME em Contentstack, liderando governança, gestão de ferramentas e consultoria técnica.",
+          "Desenvolvi automações usando AWS Lambda para otimizar a gestão de usuários e ativos no Contentstack e Bynder.",
+          "Forneci consultoria estratégica sobre testes A/B no VWO para otimizar a experiência do usuário.",
+          "Liderei iniciativas para melhorar a performance do frontend e modernizar integrações CMS com Angular e React.",
+          "Dei suporte a multi-sites e implantações globais, garantindo localização eficiente e experiência de conteúdo fluida."
+        ],
+        "technologies": "Next.js, React, Angular, Contentstack, AEM, AWS Lambda, Node.js, Terraform, GraphQL, VWO."
+      },
+      {
+        "role": "Desenvolvedor Frontend",
+        "company": "NTT DATA",
+        "date": "05/2020 - 09/2023",
+        "location": "São Paulo, BR - Remoto",
+        "tasks": [
+          "Desenvolvi soluções Contentstack para grandes clientes, incluindo modelagem de conteúdo e extensões.",
+          "Liderei um PoC integrando Contentstack, React, Node.js (BFF), GitHub Actions e Terraform.",
+          "Migrei uma implementação AEM para um CMS headless, garantindo entrega de conteúdo eficiente.",
+          "Desenvolvi SPAs e MFEs em Angular, consumindo conteúdo dinâmico do Contentstack.",
+          "Contribuí para otimizações de performance frontend, melhorando SEO, acessibilidade e tempos de renderização."
+        ],
+        "technologies": "Angular, Contentstack CMS, AEM, RESTful APIs, GraphQL, Tailwind CSS, SASS."
+      },
+      {
+        "role": "Estagiário de TI",
+        "company": "Jitterbit Wevo",
+        "date": "03/2018 - 04/2020",
+        "location": "São Paulo, BR - Remoto",
+        "tasks": [
+          "Auxiliei no desenvolvimento de APIs backend usando Java e Spring Boot.",
+          "Trabalhei com processos ETL e transformação de APIs, otimizando fluxos de integração.",
+          "Desenvolvi scripts internos para automação de monitoramento e análise de logs.",
+          "Prestei suporte técnico e documentei integrações para clientes da plataforma de APIs da Wevo."
+        ],
+        "technologies": "Java, Spring Boot, MySQL, AWS, Python (básico), SQL."
+      }
+    ]
   }
 }

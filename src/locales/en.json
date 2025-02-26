@@ -1,14 +1,62 @@
 {
-    "greeting": "Hello, I am Pedro 👋",
-    "developer": ["Frontend Developer 🚀", "Headless CMS Specialist", "Experienced in Angular and React"],
-    "cta": "See my projects →",
-    "myPortfolio": "My Portfolio",
-    "about": "About",
-    "projects": "Projects",
-    "contact": "Contact",
-    "footer": "Pedro Soares. All rights reserved.",
-    "aboutMe": {
-      "title": "Who am I?",
-      "description": "I'm Pedro, a passionate Frontend Developer with expertise in Next.js, React, and headless CMS solutions. I love building high-performance web applications and creating seamless user experiences."
-    }
+  "greeting": "Hello, I am Pedro 👋",
+  "developer": [
+    "Frontend Developer 🚀",
+    "Headless CMS Specialist",
+    "Experienced in Angular and React"
+  ],
+  "cta": "See my projects →",
+  "myPortfolio": "My Portfolio",
+  "aboutMenu": "About",
+  "projectsMenu": "Projects",
+  "contactMenu": "Contact",
+  "footer": "Pedro Soares. All rights reserved.",
+  "about": {
+    "title": "Who am I?",
+    "description": "I am a results-driven Software Developer & Headless CMS Specialist with over six years of experience in frontend development, CMS architecture, and cloud computing. Recognized as a Subject Matter Expert (SME) in Headless CMS, I have deep expertise in Contentstack and Adobe Experience Manager (AEM), leading projects focused on composable architecture, multi-site deployments, API integrations, and performance optimization. Passionate about building high-performance, scalable web applications, I thrive in leading technical initiatives that drive business growth. Currently, I am seeking international opportunities to leverage my skills in a global environment, collaborating with forward-thinking teams to create innovative digital experiences.",
+
+    "experience": [
+      {
+        "role": "Technical CMS Specialist & Senior Frontend Developer",
+        "company": "NTT DATA",
+        "date": "09/2023 - Present",
+        "location": "São Paulo, BR - Remote",
+        "tasks": [
+          "Acted as Contentstack SME, leading governance, tool management, and providing technical consultancy.",
+          "Developed automations using AWS Lambda for user and asset management in Contentstack and Bynder.",
+          "Provided strategic guidance on A/B testing with VWO for optimized user experiences.",
+          "Led frontend performance improvements and modernized CMS integrations using Angular and React.",
+          "Supported multi-sites and global deployments, optimizing localization and cross-market content."
+        ],
+        "technologies": "Next.js, React, Angular, Contentstack, AEM, AWS Lambda, Node.js, Terraform, GraphQL, VWO."
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "NTT DATA",
+        "date": "05/2020 - 09/2023",
+        "location": "São Paulo, BR - Remote",
+        "tasks": [
+          "Designed and implemented Contentstack solutions for major clients, including content modeling and extensions.",
+          "Led a PoC integrating Contentstack, React, Node.js (BFF), GitHub Actions, and Terraform.",
+          "Migrated a large-scale AEM implementation to a headless CMS for seamless content delivery.",
+          "Developed SPAs and MFEs in Angular, dynamically integrating content from Contentstack.",
+          "Contributed to frontend performance optimization, improving SEO, accessibility, and rendering times."
+        ],
+        "technologies": "Angular, Contentstack CMS, AEM, RESTful APIs, GraphQL, Tailwind CSS, SASS."
+      },
+      {
+        "role": "IT Intern",
+        "company": "Jitterbit Wevo",
+        "date": "03/2018 - 04/2020",
+        "location": "São Paulo, BR - Remote",
+        "tasks": [
+          "Assisted in backend API development using Java and Spring Boot.",
+          "Contributed to ETL processes and API transformations, optimizing enterprise workflows.",
+          "Developed internal automation scripts for system monitoring and log analysis.",
+          "Provided technical support and documentation for customers integrating with Wevo’s API platform."
+        ],
+        "technologies": "Java, Spring Boot, MySQL, AWS, Python (basic), SQL."
+      }
+    ]
   }
+}
