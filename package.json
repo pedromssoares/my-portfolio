@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "framer-motion": "^12.4.7",
+    "i18next": "^24.2.2",
     "lucide-react": "^0.476.0",
     "next": "15.1.7",
+    "next-i18next": "^15.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.4.1",
     "react-tsparticles": "^2.12.2",
     "react-typed": "^2.0.12",
     "tsparticles-engine": "^2.12.0",

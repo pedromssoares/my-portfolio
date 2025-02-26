@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next"; 
 
 export default function Home() {
+  const { t } = useTranslation(); 
+
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-transparent">
       {/* 🔹 Avatar / Ilustração */}
@@ -31,7 +34,7 @@ export default function Home() {
         className="relative z-10"
       >
         <h1 className="text-5xl font-bold text-primary dark:text-accent mb-4">
-          Olá, eu sou Pedro 👋
+          {t("greeting")}
         </h1>
       </motion.div>
 
@@ -44,10 +47,7 @@ export default function Home() {
       >
         <ReactTyped
           strings={[
-            "Desenvolvedor Frontend 🚀",
-            "Ampla experiência em Next.js & React ⚛️",
-            "Especialista em Headless CMS",
-            "Apaixonado por Tecnologia e Inovação 💡",
+            t("developer"),
           ]}
           typeSpeed={50}
           backSpeed={30}
@@ -64,7 +64,7 @@ export default function Home() {
       >
         <Link href="#projects">
           <button className="px-6 py-3 text-lg font-semibold bg-primary text-white rounded-lg shadow-lg hover:bg-secondary transition">
-            Veja meus projetos →
+            {t("cta")}
           </button>
         </Link>
       </motion.div>

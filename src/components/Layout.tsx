@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
       <ParticlesBackground />
 
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex flex-col items-center justify-center min-h-[70vh] container mx-auto px-4 py-8">
         {children}
       </main>
       <Footer />
