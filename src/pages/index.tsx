@@ -1,10 +1,28 @@
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-transparent">
+      {/* 🔹 Avatar / Ilustração */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 w-40 h-40 md:w-52 md:h-52 mb-6"
+      >
+        <Image
+          src="/avatar.jpeg"
+          alt="Pedro Soares - Desenvolvedor Frontend"
+          width={500}
+          height={500}
+          className="rounded-full shadow-lg border-4 border-primary"
+          priority
+        />
+      </motion.div>
+
       {/* 🔹 Conteúdo da Home */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -27,7 +45,8 @@ export default function Home() {
         <ReactTyped
           strings={[
             "Desenvolvedor Frontend 🚀",
-            "Especialista em Next.js & React ⚛️",
+            "Ampla experiência em Next.js & React ⚛️",
+            "Especialista em Headless CMS",
             "Apaixonado por Tecnologia e Inovação 💡",
           ]}
           typeSpeed={50}
