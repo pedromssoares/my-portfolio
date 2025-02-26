@@ -125,9 +125,9 @@ Feel free to fork this repo and create pull requests with improvements! 🚀
 ---
 
 ## 📩 Contact
-📧 Email: pedrosoares@example.com  
-🔗 LinkedIn: [Pedro Soares](https://www.linkedin.com/in/pedrosoares/)  
-🐙 GitHub: [@yourusername](https://github.com/yourusername)  
+📧 Email: pedro.santos-soares@outlook.com 
+🔗 LinkedIn: [Pedro Soares](https://www.linkedin.com/in/pedromssoares/)  
+🐙 GitHub: [@yourusername](https://github.com/pedromssoares)  
 
 ---
 
