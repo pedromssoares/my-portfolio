@@ -15,7 +15,7 @@ export default function Projects() {
       : projectsData.filter((project) => project.category.includes(filter));
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen px-6 pt-24">
+    <section className="flex flex-col items-center justify-center min-h-screen px-6 pt-24 overflow-hidden w-full">
       {/* 🔹 Título */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
@@ -27,7 +27,7 @@ export default function Projects() {
       </motion.h1>
 
       {/* 🔹 Filtros */}
-      <div className="flex space-x-4 mb-6">
+      <div className="flex flex-wrap justify-center space-x-4 mb-6 w-full">
         {["All", "Frontend", "Fullstack", "CMS"].map((category) => (
           <button
             key={category}
@@ -45,7 +45,7 @@ export default function Projects() {
 
       {/* 🔹 Lista de Projetos */}
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl w-full overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.7 }}
@@ -54,14 +54,14 @@ export default function Projects() {
           <motion.div
             key={project.id}
             whileHover={{ scale: 1.05 }}
-            className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md transition"
+            className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md transition w-full max-w-full"
           >
             <Image
               src={project.image}
               alt={project.title}
               width={300}
               height={200}
-              className="w-full h-40 object-cover rounded-md mb-4"
+              className="w-full max-w-full h-40 object-cover rounded-md mb-4"
             />
             <h3 className="text-xl font-semibold text-primary dark:text-accent">
               {project.title}
