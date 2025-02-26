@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
+    <section className="text-center">
       <h1 className="text-4xl font-bold">Welcome to My Portfolio 🚀</h1>
-    </div>
+      <p className="mt-4 text-lg">This is a work in progress.</p>
+    </section>
   );
 }
