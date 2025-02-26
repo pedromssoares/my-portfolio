@@ -1,9 +1,10 @@
 {
     "greeting": "Hello, I am Pedro 👋",
-    "developer": "Frontend Developer 🚀",
+    "developer": ["Frontend Developer 🚀", "Headless CMS Specialist", "Experienced in Angular and React"],
     "cta": "See my projects →",
     "myPortfolio": "My Portfolio",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "footer": "© 2025 Pedro Soares. All rights reserved."
   }

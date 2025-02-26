@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import Link from "next/link";
 import Image from "next/image";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
 
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen text-center overflow-hidden bg-transparent">
@@ -46,9 +46,7 @@ export default function Home() {
         className="text-2xl text-gray-600 dark:text-gray-300 mb-6 relative z-10"
       >
         <ReactTyped
-          strings={[
-            t("developer"),
-          ]}
+          strings={(t("developer", { returnObjects: true }) as string[]) || []} // 🔹 Garantimos que seja um array
           typeSpeed={50}
           backSpeed={30}
           loop

@@ -1,9 +1,10 @@
 {
-    "greeting": "Olá, eu sou Pedro 👋",
-    "developer": "Desenvolvedor Frontend 🚀",
-    "cta": "Veja meus projetos →",
-    "myPortfolio": "Meu Portfolio",
-    "about": "Sobre",
-    "projects": "Projetos",
-    "contact": "Contato"
-  }
+  "greeting": "Olá, eu sou Pedro 👋",
+  "developer": ["Desenvolvedor Frontend 🚀", "Especialista em CMS Headless", "Experiente com Angular e React"],
+  "cta": "Veja meus projetos →",
+  "myPortfolio": "Meu Portfolio",
+  "about": "Sobre",
+  "projects": "Projetos",
+  "contact": "Contato",
+  "footer": "© 2025 Pedro Soares. Todos os direitos reservados."
+}
