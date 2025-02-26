@@ -10,13 +10,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#fdf6e3",  // Tom pastel para o fundo claro
-        text: "#3b3a30",        // Cor escura para contraste
-        primary: "#ffdac1",     // Tom creme
-        secondary: "#a2d5f2",   // Azul pastel
-        accent: "#ffb6b9",      // Detalhes em rosa pastel
-        darkBackground: "#1a1a1a",  // Fundo escuro para dark mode
-        darkText: "#ffffff",         // Texto branco no dark mode
+        background: "#F9FAFB",  // Fundo claro moderno
+        text: "#1F2937",        // Texto azul acinzentado
+        primary: "#6366F1",     // Roxo moderno
+        secondary: "#1F2937",   // Vermelho vibrante
+        accent: "#A5B4FC",      // Azul pastel
+        darkBackground: "#111827", // Fundo escuro clean
+        darkText: "#F3F4F6",       // Texto claro para contraste
+        darkPrimary: "#8B5CF6",    // Roxo mais vibrante no dark mode
+        darkSecondary: "#1F2937",  // Vermelho quente no dark mode
+        darkAccent: "#93C5FD",     // Azul suave para harmonia
       },
     },
   },
