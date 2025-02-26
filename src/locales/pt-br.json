@@ -6,5 +6,9 @@
   "about": "Sobre",
   "projects": "Projetos",
   "contact": "Contato",
-  "footer": "Pedro Soares. Todos os direitos reservados."
+  "footer": "Pedro Soares. Todos os direitos reservados.",
+  "aboutMe": {
+    "title": "Quem sou eu?",
+    "description": "Sou Pedro, um desenvolvedor Frontend apaixonado, especializado em Next.js, React e soluções de CMS Headless. Adoro criar aplicações web de alto desempenho e experiências de usuário incríveis."
+  }
 }

@@ -73,7 +73,7 @@ export default function Header() {
 
       {/* 🔹 Navegação para Desktop */}
       <nav className="hidden md:flex space-x-6 ml-auto pr-4">
-        <Link href="#about" className="hover:text-gray-300 transition">
+        <Link href="/about" className="hover:text-gray-300 transition">
           {t("about")}
         </Link>
         <Link href="#projects" className="hover:text-gray-300 transition">
@@ -108,7 +108,7 @@ export default function Header() {
           className="absolute top-16 left-0 w-full bg-primary text-white shadow-md flex flex-col items-center py-4 space-y-4 md:hidden"
         >
           <Link
-            href="#about"
+            href="/about"
             className="hover:text-gray-300 transition"
             onClick={() => setMenuOpen(false)}
           >
