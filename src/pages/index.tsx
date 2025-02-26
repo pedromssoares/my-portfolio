@@ -60,7 +60,7 @@ export default function Home() {
         transition={{ delay: 1, duration: 0.5 }}
         className="relative z-10"
       >
-        <Link href="#projects">
+        <Link href="/projects">
           <button className="px-6 py-3 text-lg font-semibold bg-primary text-white rounded-lg shadow-lg hover:bg-secondary transition">
             {t("cta")}
           </button>

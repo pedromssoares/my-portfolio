@@ -13,7 +13,7 @@ export const projectsData = [
       title: "Dashboard Interativo",
       category: ["Fullstack"],
       description: "Dashboard dinâmico com gráficos interativos e consumo de API.",
-      image: "https://private-user-images.githubusercontent.com/30235371/416986495-aa17453a-a97e-4ec9-bf95-6903ef726a96.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDA1NDc2OTUsIm5iZiI6MTc0MDU0NzM5NSwicGF0aCI6Ii8zMDIzNTM3MS80MTY5ODY0OTUtYWExNzQ1M2EtYTk3ZS00ZWM5LWJmOTUtNjkwM2VmNzI2YTk2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjI2VDA1MjMxNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWY1MDQ3YzA1ZDdkNWJjMDk2ZDViOWZkMjY3MGU0ZDMyZDlhM2E4NjI5Y2RmYjY4MTY1MmRmMDRiODkyMWUyNDUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.LgyV15bLH-RNjGbNcQsOsa-L7sGNFVj2nv9k9foYKpM",
+      image: "https://github.com/user-attachments/assets/aa17453a-a97e-4ec9-bf95-6903ef726a96",
       github: "https://github.com/pedromssoares/cdp-forecast-analytics",
       demo: "https://cdp-forecast-analytics.vercel.app/",
     },
