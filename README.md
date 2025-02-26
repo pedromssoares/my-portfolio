@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Pedro Soares - Portfolio
 
-## Getting Started
+Welcome to my personal portfolio! 🚀 This project showcases my experience as a **Senior Frontend Developer & Headless CMS Specialist**. Built using **Next.js**, **Tailwind CSS**, and **Framer Motion**, this portfolio provides an interactive and seamless experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📌 Live Demo
+🔗 [View Online on Vercel](https://your-portfolio.vercel.app)
+
+
+---
+
+## 📸 Preview
+
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/a1cddf7d-1e03-4264-a2e9-5ae1c0d8b93a" />
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/ea78e823-b420-485b-b39e-a43f62babe3b" />
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/7efbab9a-a084-4511-a24b-cf0fce2024c1" />
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/9a942088-bdfa-420e-8f5c-96f3aadfff52" />
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Animations**: Framer Motion
+- **State Management**: React Hooks
+- **Localization**: i18next (English & Portuguese support)
+- **Forms**: EmailJS (for contact form integration)
+- **Deployment**: Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+/src
+  ├── components       # Reusable UI components
+  ├── pages            # Next.js pages (Home, About, Projects, Contact)
+  ├── layouts          # Page layouts (Header, Footer, ParticlesBackground)
+  ├── data             # Projects data for dynamic rendering
+  ├── hooks            # Custom React hooks (useTheme, etc.)
+  ├── locales          # Localization files (i18n translations)
+  ├── styles           # Global styles and Tailwind configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+✅ **Dark/Light Mode Toggle** (Persistent across sessions)
+✅ **Fully Responsive Design** (Mobile-friendly)
+✅ **Interactive Particles Background**
+✅ **Framer Motion Animations** (Smooth UI transitions)
+✅ **Projects Page with Category Filtering**
+✅ **Contact Form with EmailJS Integration**
+✅ **Multi-language Support (EN/PT)**
+✅ **SEO Optimized with Meta Tags**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
 
-## Deploy on Vercel
+### 3️⃣ Create a `.env.local` File
+```sh
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4️⃣ Run Locally
+```sh
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📍 App will be running at `http://localhost:3000`
+
+---
+
+## 🎯 Deployment
+
+This project is deployed using **Vercel**.
+To deploy manually:
+```sh
+git push origin main
+```
+Then, go to **Vercel Dashboard** → Import project → Deploy 🚀
+
+---
+
+## 🎨 Customization
+
+To update **projects**, modify `src/data/projectsData.ts`:
+```ts
+export const projectsData = [
+  {
+    id: 1,
+    title: "Mini Netflix",
+    category: ["Frontend"],
+    description: "Movie app built with Next.js & Tailwind CSS.",
+    image: "/images/mini-netflix.png",
+    github: "https://github.com/yourusername/mini-netflix",
+    demo: "https://mini-netflix.vercel.app",
+  },
+];
+```
+
+To edit **translations**, modify `src/locales/en.json` and `pt.json`.
+
+---
+
+## 🤝 Contributing
+Feel free to fork this repo and create pull requests with improvements! 🚀
+
+---
+
+## 📩 Contact
+📧 Email: pedrosoares@example.com  
+🔗 LinkedIn: [Pedro Soares](https://www.linkedin.com/in/pedrosoares/)  
+🐙 GitHub: [@yourusername](https://github.com/yourusername)  
+
+---
+
+**🚀 Thank you for checking out my portfolio!**
+
