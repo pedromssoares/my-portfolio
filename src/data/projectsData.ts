@@ -19,11 +19,11 @@ export const projectsData = [
     },
     {
       id: 3,
-      title: "CMS Automations",
+      title: "Headless Blog with Strapi CMS",
       category: ["CMS"],
-      description: "Scripts e automações para otimização do Contentstack e AEM.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9MY_JVj2To6uXFDfDD7_0DIVn2i5vN5oJEA&s",
-      github: "https://github.com/seuusuario/cms-automations",
-      demo: null,
+      description: "Headless CMS integration using NextJs, Strapi and Tailwind.",
+      image: "https://github.com/user-attachments/assets/77ae4518-6af9-4987-8e0c-bc1744a39f02",
+      github: "https://github.com/pedromssoares/strapi-frontend",
+      demo: "https://strapi-frontend-puce.vercel.app/",
     },
   ];
