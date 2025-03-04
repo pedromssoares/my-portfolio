@@ -26,4 +26,13 @@ export const projectsData = [
       github: "https://github.com/pedromssoares/strapi-frontend",
       demo: "https://strapi-frontend-puce.vercel.app/",
     },
+    {
+      id: 4,
+      title: "Chatbot specialized in Software Development",
+      category: ["AI"],
+      description: "Chatbot built using NextJS, OpenAI and shadcn/UI",
+      image: "https://private-user-images.githubusercontent.com/30235371/418802228-c4453d25-4110-4ad2-b78c-018c178985be.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDEwNTM4NTAsIm5iZiI6MTc0MTA1MzU1MCwicGF0aCI6Ii8zMDIzNTM3MS80MTg4MDIyMjgtYzQ0NTNkMjUtNDExMC00YWQyLWI3OGMtMDE4YzE3ODk4NWJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAzMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMzA0VDAxNTkxMFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTIxMzVhZmUxZjFjYjU1YTY3ZjA5ZjYyZmE5ZGQzOGMzZmY0MWYwMTVlOTVhNWI0ZjVmM2QxY2FhMjhkYjMxZGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.HG7jtuQN50RII3hLkfzJTdn-zlifMVgA567F9aqplOQ",
+      github: "https://github.com/pedromssoares/dev-ai-chatbot/",
+      demo: "https://dev-ai-chatbot-blue.vercel.app/",
+    },
   ];
