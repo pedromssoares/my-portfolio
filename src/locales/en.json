@@ -75,6 +75,8 @@
       "all": "All",
       "frontend": "Frontend",
       "fullstack": "Fullstack",
+      "backend": "Backend",
+      "api": "API",
       "cms": "CMS",
       "ai": "AI"
     }

@@ -28,7 +28,7 @@ export default function Projects() {
 
       {/* 🔹 Filtros */}
       <div className="flex flex-wrap justify-center space-x-4 mb-6 w-full">
-        {["All", "Frontend", "Fullstack", "CMS", "AI"].map((category) => (
+        {["All", "Frontend", "Fullstack", "CMS", "AI", "Backend", "API"].map((category) => (
           <button
             key={category}
             onClick={() => setFilter(category)}
