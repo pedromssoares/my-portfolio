@@ -5,7 +5,7 @@ Welcome to my personal portfolio! 🚀 This project showcases my experience as a
 ---
 
 ## 📌 Live Demo
-🔗 [View Online on Vercel](https://your-portfolio.vercel.app)
+🔗 [View Online on Vercel](https://pedromssoares-portfolio.vercel.app)
 
 
 ---
@@ -127,7 +127,7 @@ Feel free to fork this repo and create pull requests with improvements! 🚀
 ## 📩 Contact
 📧 Email: pedro.santos-soares@outlook.com 
 🔗 LinkedIn: [Pedro Soares](https://www.linkedin.com/in/pedromssoares/)  
-🐙 GitHub: [@yourusername](https://github.com/pedromssoares)  
+🐙 GitHub: [@pedromssoares](https://github.com/pedromssoares)  
 
 ---
 
