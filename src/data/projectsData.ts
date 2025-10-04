@@ -35,4 +35,13 @@ export const projectsData = [
       github: "https://github.com/pedromssoares/dev-ai-chatbot/",
       demo: "https://dev-ai-chatbot-blue.vercel.app/",
     },
+    {
+      id: 5,
+      title: "Bynder Functions API",
+      category: ["Backend", "API"],
+      description: "REST API built with Express.js and TypeScript for Bynder Digital Asset Management integration. Features OAuth 2.0 authentication, comprehensive mock system, and full CRUD operations.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=center",
+      github: "https://github.com/pedromssoares/bynder-functions",
+      demo: "https://bynder-functions.vercel.app",
+    },
   ];
